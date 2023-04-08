@@ -22,6 +22,16 @@
     }
 }
 
+@keyframes moveword {
+    from{
+        transform: scaleX(1) scaleY(1) translateX(20px) translateY(10px) rotate(0deg);
+    }
+    to{
+        transform: scaleX(1.2) scaleY(1.2) translateX(-20px) translateY(-10px) rotate(360deg);
+    }
+    
+}
+
 *{
     margin: 0;
     padding: 0;
@@ -35,20 +45,33 @@
 }
 
 .typing-demo{
-    width: 22em;
-    animation: typing 2s steps(22), blink 0.5s step-end infinite alternate;
+    width: 30em;
+    animation: typing 4s steps(30), blink 0.6s step-end infinite alternate;
     white-space: nowrap;
     overflow: hidden;
     border-right: 3px solid;
     font-family: monospace;
-    font-size: 32px;
-    color: black;
+    font-size: 66px;
+    color: rgb(225, 209, 119);
+}
+
+.test-transform{
+    width: 30em;
+    animation: typing 2s steps(30), moveword 1s step-end infinite alternate;
+    animation-timing-function: linear;
+    animation-delay: 5s;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 0;
+    font-family: monospace;
+    font-size: 188px;
+    color: rgb(237, 204, 17);
 }
 
 body{
     width: 100vw;
     height: 100vh;
-    background: linear-gradient(125deg, #2c3e50, #27ac60, #2980b9, #8e44ad)
+    background: linear-gradient(125deg, #e78d8d, #d75e5e, #ec8e6f, #812212)
     no-repeat;
     background-size: 400%;
     animation:bganimation 15s infinite;
